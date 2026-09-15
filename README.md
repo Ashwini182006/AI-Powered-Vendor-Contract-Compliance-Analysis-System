@@ -94,21 +94,11 @@ Audit Report and Graphs
 
 ### 1. Compliance Violation Breakdown
 
-This graph shows the different categories of compliance violations found during contract analysis.
-
-Graph file:
-
-`output/graphs/compliance_violation_breakdown.png`
+![Compliance Violation Breakdown](output/graphs/compliance_violation_breakdown.png)
 
 ### 2. Contract Analysis Performance
 
-This graph compares the performance of different retrieval methods used in the contract compliance analysis.
-
-Graph file:
-
-`output/graphs/rag_precision_comparison.png`
-
-Note: The graph filenames should match the actual files available in the `output/graphs/` folder.
+![RAG Precision Accuracy Comparison](output/graphs/rag_precision_comparison.png)
 
 ## Project Structure
 
