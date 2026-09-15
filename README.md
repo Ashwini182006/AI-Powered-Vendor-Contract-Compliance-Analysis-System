@@ -135,8 +135,8 @@ vendor_compliance_auditor/
 ### 1. Clone the Repository
 
 ```bash
-git clone YOUR_GITHUB_REPOSITORY_URL
-cd vendor_compliance_auditor
+git clone https://github.com/Ashwini182006/AI-Powered-Vendor-Contract-Compliance-Analysis-System.git
+cd AI-Powered-Vendor-Contract-Compliance-Analysis-System
 ```
 
 ### 2. Install Dependencies
