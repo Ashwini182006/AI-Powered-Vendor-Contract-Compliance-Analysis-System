@@ -94,7 +94,7 @@ Audit Report and Graphs
 
 ### 1. Compliance Violation Breakdown
 
-![Compliance Violation Breakdown](https://raw.githubusercontent.com/Ashwini182006/AI-Powered-Vendor-Contract-Compliance-Analysis-System/main/output/graphs/4_compliance_violations_breakdown.png)
+![Compliance Violation Breakdown](https://github.com/Ashwini182006/AI-Powered-Vendor-Contract-Compliance-Analysis-System/blob/main/output/graphs/4_compliance_violations_breakdown.png?raw=true)
 
 ### 2. Contract Analysis Performance
 
