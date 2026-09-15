@@ -1,99 +1,167 @@
-================================================================================
-          VENDOR CONTRACT COMPLIANCE AUDITOR: ENTERPRISE TECHNICAL ARCHITECTURE
-================================================================================
+# Vendor Contract Compliance Auditor
 
-1. EXECUTIVE SUMMARY & SYSTEM OBJECTIVE
---------------------------------------------------------------------------------
-The Vendor Contract Compliance Auditor is an enterprise-grade, highly optimized 
-backend automation pipeline engineered to evaluate and audit massive corpora of vendor 
-contracts (scaling up to 100,000+ records) against dynamic corporate compliance rulebooks. 
+### AI-Powered Vendor Contract Compliance Analysis System
 
-By eliminating the overhead of traditional web applications (frontends/backends), 
-this system focuses entirely on core algorithmic efficiency, high-speed vector 
-retrieval, state-of-the-art neural re-ranking, and automated reporting. It acts as 
-an autonomous compliance officer, ensuring legal frameworks are strictly met.
+An intelligent backend automation system that analyzes vendor contracts against corporate compliance rules using Artificial Intelligence, semantic search, and neural re-ranking.
 
+---
 
-2. ARCHITECTURAL DESIGN & CORE MODULES
---------------------------------------------------------------------------------
-The project adheres to a strict modular separation of concerns:
+## 📌 Project Overview
 
-  vendor_compliance_auditor/
-  ├── data/
-  │   ├── contracts.csv         # Raw source data (Contract clauses & metadata)
-  │   └── rulebook.txt          # Target compliance policies & guidelines
-  ├── ann/
-  │   ├── __init__.py           # Package namespace initializer
-  │   ├── embedder.py           # Dense vector representation engine
-  │   └── hnsw_index.py         # FAISS HNSW graph vector storage & lookup
-  ├── rag/
-  │   ├── __init__.py           # Package namespace initializer
-  │   ├── retriever.py          # Context extraction orchestrator
-  │   └── reranker.py           # Cross-Encoder neural re-ranking engine
-  ├── output/
-  │   ├── audit_report.pdf      # Professional ReportLab PDF audit output
-  │   └── graphs/               # Automated analytics dashboard (7 high-res plots)
-  ├── tests.py                  # Comprehensive unit & integration testing suite
-  ├── generate_all_graphs.py    # Analytics generator for business insights
-  ├── requirements.txt          # Pinned version dependency manifest
-  └── main.py                   # System execution orchestrator
+The **Vendor Contract Compliance Auditor** is an AI-based system designed to automate the process of checking vendor contracts against a company's compliance rulebook.
 
+Traditional contract auditing requires manual reading and comparison of multiple documents. This project uses AI and Retrieval-Augmented Generation (RAG) techniques to identify relevant contract clauses, compare them with compliance rules, and generate audit reports.
 
-3. DEEP-DIVE ALGORITHMIC BREAKDOWN
---------------------------------------------------------------------------------
-A. Dense Vector Representation (`ann/embedder.py`)
-   - Model: 'all-MiniLM-L6-v2' (Sentence Transformers)
-   - Mechanism: Maps textual contract clauses into a dense 384-dimensional vector space 
-     where semantically similar legal statements cluster together. Optimized with 
-     suppressed progress bars and unauthenticated request filters for clean console runs.
+The system focuses on efficient contract analysis, semantic retrieval, compliance checking, and automated reporting.
 
-B. Hierarchical Navigable Small World Indexing (`ann/hnsw_index.py`)
-   - Algorithm: FAISS IndexHNSWFlat (Graph-based ANN)
-   - Mechanism: Unlike brute-force linear search (O(N)), HNSW constructs a multi-layer 
-     proximity graph enabling logarithmic O(log N) search times. M-parameter defines 
-     graph connectivity, providing microsecond-level retrieval latency even at scale.
+## 🎯 Project Objectives
 
-C. Two-Stage RAG Pipeline (`rag/retriever.py` & `rag/reranker.py`)
-   - Stage 1 (Retrieval): ANN Retriever fetches top-K (e.g., K=3) candidate clauses 
-     using Euclidean distance over the HNSW vector graph.
-   - Stage 2 (Neural Re-ranking): Uses a deep Cross-Encoder model ('cross-encoder/ms-marco-MiniLM-L-6-v2') 
-     to jointly process the compliance rule and candidate clause. Unlike bi-encoders, 
-     cross-encoders perform full self-attention across query and document tokens, 
-     elevating retrieval precision accuracy from ~68% to over 94%.
+* Automate vendor contract compliance auditing.
+* Reduce manual contract review effort.
+* Retrieve relevant contract clauses using semantic similarity.
+* Identify potential compliance violations.
+* Generate structured audit reports.
+* Support large-scale contract analysis.
 
+## ✨ Key Features
 
-4. ANALYTICS & VISUALIZATION ENGINE (`generate_all_graphs.py`)
---------------------------------------------------------------------------------
-The system automatically compiles multi-dimensional operational metrics into 7 high-resolution (300 DPI) graphs stored in `output/graphs/`:
-   1. End-to-End Pipeline Architecture Flowchart (NetworkX directed graph layout).
-   2. HNSW Search Latency vs. Dataset Scale (Log-linear performance verification).
-   3. RAG Precision Accuracy Comparison (Bi-Encoder vs. Cross-Encoder bar charts).
-   4. Audit Compliance Violation Breakdown (Categorical share distribution pie chart).
-   5. Stage-wise Execution Latency Profile (Horizontal runtime bottleneck analysis).
-   6. Cross-Encoder Relevance Score Distribution (Statistical density histogram).
-   7. Vector Index Memory Footprint Growth (RAM consumption tracking curve).
+* **AI-Based Semantic Search:** Converts contract clauses into meaningful vector representations.
+* **FAISS HNSW Indexing:** Enables efficient similarity-based retrieval.
+* **Two-Stage RAG Pipeline:** Retrieves and re-ranks relevant contract clauses.
+* **Neural Re-Ranking:** Uses a Cross-Encoder to improve relevance scoring.
+* **Compliance Rulebook Analysis:** Compares contract content against corporate rules.
+* **Automated PDF Reports:** Generates professional audit reports.
+* **Analytics Graphs:** Visualizes compliance results and system performance.
 
+## 🛠️ Technologies Used
 
-5. END-TO-END EXECUTION WORKFLOW
---------------------------------------------------------------------------------
-Execute the pipeline sequentially via Windows CMD or any standard terminal:
+| Technology            | Purpose                    |
+| --------------------- | -------------------------- |
+| Python                | Core development           |
+| Sentence Transformers | Text embeddings            |
+| FAISS                 | Vector indexing and search |
+| RAG                   | Relevant clause retrieval  |
+| Cross-Encoder         | Neural re-ranking          |
+| ReportLab             | PDF report generation      |
+| Matplotlib            | Analytics visualization    |
+| NetworkX              | Architecture flowchart     |
 
-   Step 1: Install environment dependencies
-           pip install -r requirements.txt
+## 🔄 System Workflow
 
-   Step 2: Run component verification tests
-           python tests.py
+```text
+Vendor Contracts + Compliance Rulebook
+                 ↓
+       Text Preprocessing
+                 ↓
+       Sentence Embeddings
+                 ↓
+          FAISS HNSW Index
+                 ↓
+       Relevant Clause Retrieval
+                 ↓
+       Cross-Encoder Re-Ranking
+                 ↓
+       Compliance Evaluation
+                 ↓
+        Audit Report + Graphs
+```
 
-   Step 3: Execute the compliance audit orchestrator
-           python main.py
+## 📊 Project Analytics
 
-   Step 4: Generate the analytics visualization bundle
-           python generate_all_graphs.py
+### 1. Compliance Violation Breakdown
 
+This graph shows the distribution of identified compliance violations across different categories.
 
-6. ENTERPRISE BENEFITS & COMPLIANCE ASSURANCE
---------------------------------------------------------------------------------
-- Scalability: Handles massive institutional datasets effortlessly via graph indexing.
-- Zero Semantic Drift: Deep cross-encoder re-ranking prevents false positives.
-- Audit Trail Integrity: Fully reproducible execution generating print-ready PDF reports.
-================================================================================
+![Compliance Violation Breakdown](output/graphs/compliance_violation_breakdown.png)
+
+### 2. Contract Analysis Performance
+
+This graph presents the performance comparison of different retrieval approaches used in the compliance auditing pipeline.
+
+![RAG Precision Accuracy Comparison](output/graphs/rag_precision_comparison.png)
+
+> Note: Graph filenames should match the actual files available in the `output/graphs/` folder.
+
+## 📁 Project Structure
+
+```text
+vendor_compliance_auditor/
+│
+├── data/
+│   ├── contracts.csv
+│   └── rulebook.txt
+│
+├── ann/
+│   ├── __init__.py
+│   ├── embedder.py
+│   └── hnsw_index.py
+│
+├── rag/
+│   ├── __init__.py
+│   ├── retriever.py
+│   └── reranker.py
+│
+├── output/
+│   ├── audit_report.pdf
+│   └── graphs/
+│
+├── tests.py
+├── generate_all_graphs.py
+├── requirements.txt
+├── main.py
+└── README.md
+```
+
+## ⚙️ Installation & Execution
+
+### 1. Clone the Repository
+
+```bash
+git clone YOUR_GITHUB_REPOSITORY_URL
+cd vendor_compliance_auditor
+```
+
+### 2. Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 3. Run Tests
+
+```bash
+python tests.py
+```
+
+### 4. Run the Compliance Auditor
+
+```bash
+python main.py
+```
+
+### 5. Generate Analytics Graphs
+
+```bash
+python generate_all_graphs.py
+```
+
+## 📄 Output
+
+The system generates:
+
+* Automated compliance audit report in PDF format.
+* Compliance violation analytics.
+* Retrieval and re-ranking performance graphs.
+* Contract analysis results.
+
+## 👩‍💻 Author
+
+**Ashwini Mali**
+
+GitHub: https://github.com/Ashwini182006
+
+---
+
+### Disclaimer
+
+This project is an AI-assisted compliance auditing tool. Its results are intended to support contract review and should be validated by qualified legal or compliance professionals before making final decisions.
