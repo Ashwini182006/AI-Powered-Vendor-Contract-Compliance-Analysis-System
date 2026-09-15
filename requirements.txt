@@ -1,0 +1,7 @@
+faiss-cpu>=1.7.4
+sentence-transformers>=2.2.2
+numpy>=1.24.0
+pandas>=2.0.0
+matplotlib>=3.7.1
+reportlab>=3.6.12
+networkx>=3.0
