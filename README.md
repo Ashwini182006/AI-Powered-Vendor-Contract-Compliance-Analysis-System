@@ -94,11 +94,11 @@ Audit Report and Graphs
 
 ### 1. Compliance Violation Breakdown
 
-![Compliance Violation Breakdown](output/graphs/compliance_violation_breakdown.png)
+![Compliance Violation Breakdown](./output/graphs/compliance_violation_breakdown.png)
 
 ### 2. Contract Analysis Performance
 
-![RAG Precision Accuracy Comparison](output/graphs/rag_precision_comparison.png)
+![RAG Precision Accuracy Comparison](./output/graphs/rag_precision_comparison.png)
 
 ## Project Structure
 
