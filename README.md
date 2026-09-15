@@ -98,7 +98,7 @@ Audit Report and Graphs
 
 ### 2. Contract Analysis Performance
 
-![RAG Precision Accuracy Comparison](./output/graphs/rag_precision_comparison.png)
+![RAG Precision Accuracy Comparison](https://github.com/Ashwini182006/AI-Powered-Vendor-Contract-Compliance-Analysis-System/blob/main/output/graphs/3_rag_precision_comparison.png?raw=true)
 
 ## Project Structure
 
