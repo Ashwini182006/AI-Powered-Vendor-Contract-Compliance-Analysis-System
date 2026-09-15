@@ -183,4 +183,3 @@ GitHub:https://github.com/Ashwini182006
 ## Disclaimer
 This project is an AI-assisted contract compliance auditing tool. The results are meant to support contract review. Final decisions should be checked by qualified legal or compliance professionals.
 
-This project is an AI-assisted contract compliance auditing tool. The results are meant to support contract review. Final decisions should be checked by qualified legal or compliance professionals.
