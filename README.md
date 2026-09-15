@@ -1,88 +1,116 @@
 # Vendor Contract Compliance Auditor
 
-### AI-Powered Vendor Contract Compliance Analysis System
+## AI-Powered Vendor Contract Compliance Analysis System
 
-An intelligent backend automation system that analyzes vendor contracts against corporate compliance rules using Artificial Intelligence, semantic search, and neural re-ranking.
+Vendor Contract Compliance Auditor is an AI-based backend system that helps analyze vendor contracts according to company compliance rules. It uses semantic search, AI models, and a RAG-based approach to find relevant contract clauses and check them against the compliance rulebook.
 
----
+The main purpose of this project is to make contract checking easier and reduce the time required for manual review.
 
-## 📌 Project Overview
+## Project Objectives
 
-The **Vendor Contract Compliance Auditor** is an AI-based system designed to automate the process of checking vendor contracts against a company's compliance rulebook.
+* To automate vendor contract compliance checking.
+* To reduce manual contract review work.
+* To find relevant contract clauses using semantic search.
+* To identify possible compliance issues.
+* To generate audit reports automatically.
+* To support the analysis of multiple vendor contracts.
 
-Traditional contract auditing requires manual reading and comparison of multiple documents. This project uses AI and Retrieval-Augmented Generation (RAG) techniques to identify relevant contract clauses, compare them with compliance rules, and generate audit reports.
+## Key Features
 
-The system focuses on efficient contract analysis, semantic retrieval, compliance checking, and automated reporting.
+### 1. Semantic Search
 
-## 🎯 Project Objectives
+The system converts contract clauses into vector representations and searches for relevant information based on meaning.
 
-* Automate vendor contract compliance auditing.
-* Reduce manual contract review effort.
-* Retrieve relevant contract clauses using semantic similarity.
-* Identify potential compliance violations.
-* Generate structured audit reports.
-* Support large-scale contract analysis.
+### 2. FAISS HNSW Indexing
 
-## ✨ Key Features
+FAISS HNSW is used to search similar contract clauses efficiently.
 
-* **AI-Based Semantic Search:** Converts contract clauses into meaningful vector representations.
-* **FAISS HNSW Indexing:** Enables efficient similarity-based retrieval.
-* **Two-Stage RAG Pipeline:** Retrieves and re-ranks relevant contract clauses.
-* **Neural Re-Ranking:** Uses a Cross-Encoder to improve relevance scoring.
-* **Compliance Rulebook Analysis:** Compares contract content against corporate rules.
-* **Automated PDF Reports:** Generates professional audit reports.
-* **Analytics Graphs:** Visualizes compliance results and system performance.
+### 3. RAG Pipeline
 
-## 🛠️ Technologies Used
+The project uses a two-stage RAG pipeline to retrieve relevant clauses and improve the search results.
+
+### 4. Neural Re-Ranking
+
+A Cross-Encoder is used to re-rank the retrieved clauses and improve their relevance.
+
+### 5. Compliance Rulebook Analysis
+
+The system compares contract information with the company's compliance rules and identifies possible violations.
+
+### 6. PDF Audit Reports
+
+The project generates PDF reports containing contract analysis and compliance results.
+
+### 7. Analytics Graphs
+
+Graphs are generated to show compliance violations and compare retrieval performance.
+
+## Technologies Used
 
 | Technology            | Purpose                    |
 | --------------------- | -------------------------- |
-| Python                | Core development           |
+| Python                | Main programming language  |
 | Sentence Transformers | Text embeddings            |
-| FAISS                 | Vector indexing and search |
+| FAISS                 | Vector search and indexing |
 | RAG                   | Relevant clause retrieval  |
 | Cross-Encoder         | Neural re-ranking          |
 | ReportLab             | PDF report generation      |
-| Matplotlib            | Analytics visualization    |
+| Matplotlib            | Graphs and visualization   |
 | NetworkX              | Architecture flowchart     |
 
-## 🔄 System Workflow
+## System Workflow
 
-```text
-Vendor Contracts + Compliance Rulebook
-                 ↓
-       Text Preprocessing
-                 ↓
-       Sentence Embeddings
-                 ↓
-          FAISS HNSW Index
-                 ↓
-       Relevant Clause Retrieval
-                 ↓
-       Cross-Encoder Re-Ranking
-                 ↓
-       Compliance Evaluation
-                 ↓
-        Audit Report + Graphs
-```
+Vendor Contracts and Compliance Rulebook
 
-## 📊 Project Analytics
+↓
+
+Text Preprocessing
+
+↓
+
+Sentence Embeddings
+
+↓
+
+FAISS HNSW Index
+
+↓
+
+Relevant Clause Retrieval
+
+↓
+
+Cross-Encoder Re-Ranking
+
+↓
+
+Compliance Evaluation
+
+↓
+
+Audit Report and Graphs
+
+## Project Analytics
 
 ### 1. Compliance Violation Breakdown
 
-This graph shows the distribution of identified compliance violations across different categories.
+This graph shows the different categories of compliance violations found during contract analysis.
 
-![Compliance Violation Breakdown](output/graphs/compliance_violation_breakdown.png)
+Graph file:
+
+`output/graphs/compliance_violation_breakdown.png`
 
 ### 2. Contract Analysis Performance
 
-This graph presents the performance comparison of different retrieval approaches used in the compliance auditing pipeline.
+This graph compares the performance of different retrieval methods used in the contract compliance analysis.
 
-![RAG Precision Accuracy Comparison](output/graphs/rag_precision_comparison.png)
+Graph file:
 
-> Note: Graph filenames should match the actual files available in the `output/graphs/` folder.
+`output/graphs/rag_precision_comparison.png`
 
-## 📁 Project Structure
+Note: The graph filenames should match the actual files available in the `output/graphs/` folder.
+
+## Project Structure
 
 ```text
 vendor_compliance_auditor/
@@ -112,7 +140,7 @@ vendor_compliance_auditor/
 └── README.md
 ```
 
-## ⚙️ Installation & Execution
+## Installation and Execution
 
 ### 1. Clone the Repository
 
@@ -145,23 +173,24 @@ python main.py
 python generate_all_graphs.py
 ```
 
-## 📄 Output
+## Output
 
-The system generates:
+After running the project, the system generates:
 
-* Automated compliance audit report in PDF format.
-* Compliance violation analytics.
+* Compliance audit report in PDF format.
+* Compliance violation graphs.
 * Retrieval and re-ranking performance graphs.
 * Contract analysis results.
 
-## 👩‍💻 Author
+
+
+## Author
 
 **Ashwini Mali**
 
-GitHub: https://github.com/Ashwini182006
+GitHub:https://github.com/Ashwini182006
 
----
+## Disclaimer
+This project is an AI-assisted contract compliance auditing tool. The results are meant to support contract review. Final decisions should be checked by qualified legal or compliance professionals.
 
-### Disclaimer
-
-This project is an AI-assisted compliance auditing tool. Its results are intended to support contract review and should be validated by qualified legal or compliance professionals before making final decisions.
+This project is an AI-assisted contract compliance auditing tool. The results are meant to support contract review. Final decisions should be checked by qualified legal or compliance professionals.
